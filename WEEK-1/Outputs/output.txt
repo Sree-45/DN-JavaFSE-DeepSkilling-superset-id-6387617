@@ -1,0 +1,99 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Code\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin SingletonTest "
+=== COMPREHENSIVE SINGLETON PATTERN TESTING ===
+
+Test 1: Basic Singleton Behavior
+==================================================
+Logger instance created at: 2025-06-18 00:58:58
+Same instance check: true
+Instance1 ID: 931919113
+Instance2 ID: 931919113
+Instance3 ID: 931919113
+PASS: Basic singleton behavior verified
+
+Test 2: HashCode Consistency
+==================================================
+HashCode 1: 931919113
+HashCode 2: 931919113
+HashCode 3 (same as 1): 931919113
+PASS: HashCode consistency verified
+
+Test 3: Equals Method Testing
+==================================================
+instance1.equals(instance2): true
+instance2.equals(instance1): true
+instance1.equals(null): false
+instance1.equals(instance1): true
+PASS: Equals method verified
+
+Test 4: ToString Consistency
+==================================================
+ToString 1: Logger@378bf509
+ToString 2: Logger@378bf509
+Same toString: true
+PASS: ToString consistency verified
+
+Test 5: Instance Comparison Edge Cases
+==================================================
+All 10 instances are same: true
+First instance ID: 931919113
+Last instance ID: 931919113
+[Logger@378bf509, Logger@378bf509, Logger@378bf509, Logger@378bf509, Logger@378bf509, Logger@378bf509, Logger@378bf509, Logger@378bf509, Logger@378bf509, Logger@378bf509]
+PASS: Instance comparison verified
+
+Test 6: Multiple References Test
+==================================================
+All references same: true
+Reference 1 ID: 931919113
+Reference 2 ID: 931919113
+Reference 3 ID: 931919113
+Reference 4 ID: 931919113
+PASS: Multiple references verified
+
+Test 7: Thread Safety Basic Test
+==================================================
+Unique instances created: 1
+Expected: 1, Actual: 1
+PASS: Thread safety verified
+
+Test 8: Concurrent Access Stress Test
+==================================================
+Total threads: 100
+Iterations per thread: 1000
+Total operations: 100000
+Completed threads: 100
+Unique instances: 1
+PASS: Concurrent access stress test verified
+
+Test 9: Memory Efficiency Test
+==================================================
+Created 1000 references
+All point to same object: true
+Used memory: 20183264 bytes
+Single instance ID: 931919113
+PASS: Memory efficiency verified
+
+Test 10: Singleton Integrity Test
+==================================================
+Instance persistent across 100 calls: true
+Base instance: 931919113
+PASS: Singleton integrity verified
+
+Test 11: Functionality Consistency Test
+==================================================
+Logger1 info contains correct hash: true
+Logger2 info contains correct hash: true
+Both have same hash code: true
+Testing logging methods...
+[INFO] 2025-06-18 00:58:58 - Test from logger1
+[WARNING] 2025-06-18 00:58:58 - Test from logger2
+PASS: Functionality consistency verified
+
+Test 12: Reflection Protection Test
+==================================================
+Found private constructor via reflection
+Constructor accessible: false
+Reflection blocked: InvocationTargetException
+PASS: Reflection test completed
+
+
+=== ALL SINGLETON TESTS COMPLETED ===
