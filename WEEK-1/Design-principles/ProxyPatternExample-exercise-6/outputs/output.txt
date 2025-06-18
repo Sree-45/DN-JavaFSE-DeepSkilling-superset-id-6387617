@@ -1,0 +1,280 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Code\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin ProxyPatternExampleTest "
+=== Proxy Pattern Test Suite ===
+
+Test 1: Lazy Initialization
+Cache cleared
+ProxyImage created for: photo1.jpg (NO loading yet - lazy initialization)
+ProxyImage created for: photo3.jpg (NO loading yet - lazy initialization)
+  - Created 3 proxy images
+  - Cache status before display():
+Cache Status: 0 images cached
+  - Displaying image1:
+display() called for: photo1.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: photo1.jpg
+Image loaded successfully: photo1.jpg
+Image loaded and added to cache: photo1.jpg
+Displaying image: photo1.jpg
+  - Cache status after displaying image1:
+Cache Status: 1 images cached
+  - photo1.jpg
+  - image3 not accessed yet - should not be in cache
+  - Displaying image3 to verify it loads now:
+display() called for: photo3.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: photo3.jpg
+Image loaded successfully: photo3.jpg
+Image loaded and added to cache: photo3.jpg
+Displaying image: photo3.jpg
+  - Final cache status:
+Cache Status: 2 images cached
+  - photo1.jpg
+  - photo3.jpg
+  PASS: Lazy initialization working correctly
+
+Test 2: Caching Behavior
+Cache cleared
+ProxyImage created for: cached_image.jpg (NO loading yet - lazy initialization)
+  - First access (should load):
+display() called for: cached_image.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: cached_image.jpg
+Image loaded successfully: cached_image.jpg
+Image loaded and added to cache: cached_image.jpg
+Displaying image: cached_image.jpg
+  - Second access (should use cache):
+display() called for: cached_image.jpg
+CACHE HIT: Image found in cache - no loading required: cached_image.jpg
+Displaying image: cached_image.jpg
+  - Final cache status:
+Cache Status: 1 images cached
+  - cached_image.jpg
+  PASS: Caching behavior working correctly
+
+Test 3: Cross-Instance Sharing
+Cache cleared
+ProxyImage created for: shared_image.jpg (NO loading yet - lazy initialization)
+  - First proxy displaying image:
+display() called for: shared_image.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: shared_image.jpg
+Image loaded successfully: shared_image.jpg
+Image loaded and added to cache: shared_image.jpg
+Displaying image: shared_image.jpg
+ProxyImage created for: shared_image.jpg (NO loading yet - lazy initialization)
+  - Second proxy displaying same image:
+display() called for: shared_image.jpg
+CACHE HIT: Image found in cache - no loading required: shared_image.jpg
+Displaying image: shared_image.jpg
+  - Cache status after both proxies:
+Cache Status: 1 images cached
+  - shared_image.jpg
+  PASS: Cross-instance sharing working correctly
+
+Test 4: Interface Compliance
+ProxyImage created for: proxy_image.jpg (NO loading yet - lazy initialization)
+Loading image from remote server: real_image.jpg
+Image loaded successfully: real_image.jpg
+  - Displaying ProxyImage:
+display() called for: proxy_image.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: proxy_image.jpg
+Image loaded successfully: proxy_image.jpg
+Image loaded and added to cache: proxy_image.jpg
+Displaying image: proxy_image.jpg
+  - Displaying RealImage:
+Displaying image: real_image.jpg
+  PASS: Interface compliance verified
+
+Test 5: Performance Optimization
+Cache cleared
+ProxyImage created for: performance_test.jpg (NO loading yet - lazy initialization)
+  - First access (loading):
+display() called for: performance_test.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: performance_test.jpg
+Image loaded successfully: performance_test.jpg
+Image loaded and added to cache: performance_test.jpg
+Displaying image: performance_test.jpg
+  - Multiple rapid accesses (cached):
+display() called for: performance_test.jpg
+CACHE HIT: Image found in cache - no loading required: performance_test.jpg
+Displaying image: performance_test.jpg
+display() called for: performance_test.jpg
+CACHE HIT: Image found in cache - no loading required: performance_test.jpg
+Displaying image: performance_test.jpg
+display() called for: performance_test.jpg
+CACHE HIT: Image found in cache - no loading required: performance_test.jpg
+Displaying image: performance_test.jpg
+display() called for: performance_test.jpg
+CACHE HIT: Image found in cache - no loading required: performance_test.jpg
+Displaying image: performance_test.jpg
+display() called for: performance_test.jpg
+CACHE HIT: Image found in cache - no loading required: performance_test.jpg
+Displaying image: performance_test.jpg
+  - First access time: 2006ms
+  - 5 cached accesses time: 4ms
+  PASS: Performance optimization working
+
+Test 6: Memory Management
+Cache cleared
+  - Creating and displaying 5 different images:
+ProxyImage created for: memory_test_1.jpg (NO loading yet - lazy initialization)
+display() called for: memory_test_1.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: memory_test_1.jpg
+Image loaded successfully: memory_test_1.jpg
+Image loaded and added to cache: memory_test_1.jpg
+Displaying image: memory_test_1.jpg
+ProxyImage created for: memory_test_2.jpg (NO loading yet - lazy initialization)
+display() called for: memory_test_2.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: memory_test_2.jpg
+Image loaded successfully: memory_test_2.jpg
+Image loaded and added to cache: memory_test_2.jpg
+Displaying image: memory_test_2.jpg
+ProxyImage created for: memory_test_3.jpg (NO loading yet - lazy initialization)
+display() called for: memory_test_3.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: memory_test_3.jpg
+Image loaded successfully: memory_test_3.jpg
+Image loaded and added to cache: memory_test_3.jpg
+Displaying image: memory_test_3.jpg
+ProxyImage created for: memory_test_4.jpg (NO loading yet - lazy initialization)
+display() called for: memory_test_4.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: memory_test_4.jpg
+Image loaded successfully: memory_test_4.jpg
+Image loaded and added to cache: memory_test_4.jpg
+Displaying image: memory_test_4.jpg
+ProxyImage created for: memory_test_5.jpg (NO loading yet - lazy initialization)
+display() called for: memory_test_5.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: memory_test_5.jpg
+Image loaded successfully: memory_test_5.jpg
+Image loaded and added to cache: memory_test_5.jpg
+Displaying image: memory_test_5.jpg
+  - Final cache status:
+Cache Status: 5 images cached
+  - memory_test_3.jpg
+  - memory_test_5.jpg
+  - memory_test_4.jpg
+  - memory_test_1.jpg
+  - memory_test_2.jpg
+  PASS: Memory management working correctly
+
+Test 7: Thread Safety
+Cache cleared
+ProxyImage created for: thread_safe_image.jpg (NO loading yet - lazy initialization)
+  - Creating 3 threads to access shared image:
+    Thread 0 accessing image
+    Thread 2 accessing image
+    Thread 1 accessing image
+display() called for: thread_safe_image.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+display() called for: thread_safe_image.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+display() called for: thread_safe_image.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: thread_safe_image.jpg
+Loading image from remote server: thread_safe_image.jpg
+Loading image from remote server: thread_safe_image.jpg
+Image loaded successfully: thread_safe_image.jpg
+Image loaded and added to cache: thread_safe_image.jpg
+Displaying image: thread_safe_image.jpg
+Image loaded successfully: thread_safe_image.jpg
+Image loaded and added to cache: thread_safe_image.jpg
+Displaying image: thread_safe_image.jpg
+Image loaded successfully: thread_safe_image.jpg
+Image loaded and added to cache: thread_safe_image.jpg
+Displaying image: thread_safe_image.jpg
+  - All threads completed
+  - Final cache status:
+Cache Status: 1 images cached
+  - thread_safe_image.jpg
+  PASS: Thread safety verified
+
+Test 8: Edge Cases
+Cache cleared
+  - Testing empty filename:
+ProxyImage created for:  (NO loading yet - lazy initialization)
+display() called for:
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server:
+Image loaded successfully: 
+Image loaded and added to cache: 
+Displaying image:
+    Empty filename handled
+  - Testing special characters:
+ProxyImage created for: image@#$%^&*().jpg (NO loading yet - lazy initialization)
+display() called for: image@#$%^&*().jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: image@#$%^&*().jpg
+Image loaded successfully: image@#$%^&*().jpg
+Image loaded and added to cache: image@#$%^&*().jpg
+Displaying image: image@#$%^&*().jpg
+  - Testing long filename:
+ProxyImage created for: very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg (NO loading yet - lazy initialization)
+display() called for: very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg
+Image loaded successfully: very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg
+Image loaded and added to cache: very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg
+Displaying image: very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg
+  - Final cache status:
+Cache Status: 3 images cached
+  -
+  - image@#$%^&*().jpg
+  - very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg
+  PASS: Edge cases handled correctly
+
+Test 9: Cache Management
+  - Loading images into cache:
+ProxyImage created for: cache_test1.jpg (NO loading yet - lazy initialization)
+ProxyImage created for: cache_test2.jpg (NO loading yet - lazy initialization)
+display() called for: cache_test1.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: cache_test1.jpg
+Image loaded successfully: cache_test1.jpg
+Image loaded and added to cache: cache_test1.jpg
+Displaying image: cache_test1.jpg
+display() called for: cache_test2.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: cache_test2.jpg
+Image loaded successfully: cache_test2.jpg
+Image loaded and added to cache: cache_test2.jpg
+Displaying image: cache_test2.jpg
+  - Cache before clearing:
+Cache Status: 5 images cached
+  -
+  - image@#$%^&*().jpg
+  - cache_test2.jpg
+  - cache_test1.jpg
+  - very_long_filename_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.jpg
+  - Clearing cache:
+Cache cleared
+  - Cache after clearing:
+Cache Status: 0 images cached
+  - Accessing image after cache clear:
+display() called for: cache_test1.jpg
+LAZY INITIALIZATION: Image not in cache - loading from remote server...
+Loading image from remote server: cache_test1.jpg
+Image loaded successfully: cache_test1.jpg
+Image loaded and added to cache: cache_test1.jpg
+Displaying image: cache_test1.jpg
+  - Final cache status:
+Cache Status: 1 images cached
+  - cache_test1.jpg
+  PASS: Cache management working correctly
+
+=== Test Summary ===
+Total Tests: 9
+Passed: 9
+Failed: 0
+Success Rate: 100%
+
+ALL TESTS PASSED! Proxy Pattern implementation is working correctly.
+
+=== Test Suite Complete ===
+
+C:\Users\srees\Desktop\DN-CZ-JFSE>
