@@ -9,7 +9,6 @@
   - `PaymentService.java` - Service class using the adapters
   - `AdapterPatternTest.java` - Test class demonstrating the pattern
 - **`Outputs/`**: Contains output images and text files showing program execution results
-- **`lib/`**: Contains project dependencies
 
 ## Run File
 Execute `AdapterPatternTest.java` to see the outputs.

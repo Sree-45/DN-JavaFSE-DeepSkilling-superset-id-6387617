@@ -8,7 +8,6 @@
   - `ProxyImage.java` - Proxy implementation for lazy loading
   - `ProxyPatternExampleTest.java` - Test class demonstrating the pattern
 - **`Outputs/`**: Contains output images and text files showing program execution results
-- **`lib/`**: Contains project dependencies
 
 ## Run File
 Execute `ProxyPatternExampleTest.java` to see the outputs.

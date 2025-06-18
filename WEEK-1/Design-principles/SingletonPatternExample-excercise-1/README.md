@@ -6,7 +6,6 @@
   - `Logger.java` - Singleton class implementation
   - `SingletonTest.java` - Test class demonstrating singleton behavior
 - **`Outputs/`**: Contains output images and text files showing program execution results
-- **`lib/`**: Contains project dependencies
 
 ## Run File
 Execute `SingletonTest.java` to see the outputs.

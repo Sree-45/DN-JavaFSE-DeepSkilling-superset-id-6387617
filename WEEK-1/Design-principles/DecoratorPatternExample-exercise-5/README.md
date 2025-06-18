@@ -9,7 +9,6 @@
   - `TargetInterface/` - Contains the component interface
   - `DecoratorPatternTest.java` - Test class demonstrating the pattern
 - **`Outputs/`**: Contains output images and text files showing program execution results
-- **`lib/`**: Contains project dependencies
 
 ## Run File
 Execute `DecoratorPatternTest.java` to see the outputs.
