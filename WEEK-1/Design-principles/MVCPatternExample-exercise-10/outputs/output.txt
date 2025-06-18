@@ -1,0 +1,73 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Cursor\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin MVCPatternExampleMain "
+=== MVC Pattern Test Suite ===
+
+Test 1: Model Creation
+  - Student name: John Doe
+  - Student ID: STD001
+  - Student grade: A
+  PASS: Model created successfully with correct data
+
+Test 2: View Display
+=== Student Details ===
+Name: Jane Smith
+ID: STD002
+Grade: B+
+=======================
+  - View created successfully
+  - Display method executed without errors
+  PASS: View display works correctly
+
+Test 3: Controller Creation
+  - Controller created successfully
+  - Student name from controller: Alice Johnson
+  - Student ID from controller: STD003
+  - Student grade from controller: A-
+  PASS: Controller creation and data access successful
+
+Test 4: Model-View Communication
+  - Testing model-view communication through controller:
+=== Student Details ===
+Name: Bob Wilson
+ID: STD004
+Grade: B
+=======================
+  PASS: Model-view communication successful
+
+Test 5: Controller Updates
+  - Updated name: Charlie Brown Updated
+  - Updated grade: B+
+  PASS: Controller updates work correctly
+
+Test 6: Component Independence
+  - Controller1 with model1: Diana Prince
+  - Controller2 with model2: Edward Norton
+  - Controller3 with model2 and view2: Edward Norton
+  PASS: Component independence verified
+
+Test 7: Null Safety
+  - Student name is null: true
+  - Student ID is null: true
+  - Student grade is null: true
+  PASS: Null safety maintained
+
+Test 8: MVC Data Flow
+  - Initial state:
+=== Student Details ===
+Name: Final Test
+ID: STD008
+Grade: C
+=======================
+  - After updating through controller:
+=== Student Details ===
+Name: Final Test Updated
+ID: STD008
+Grade: A
+=======================
+  PASS: Complete MVC data flow verified
+
+=== Test Summary ===
+Total Tests: 8
+Passed: 8
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! MVC Pattern implementation is working correctly.
