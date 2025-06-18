@@ -1,0 +1,66 @@
+=== Builder Pattern Test Suite ===
+
+Test 1: Basic Functionality - Minimum Required Parameters
+  - CPU: Intel Core i3
+  - RAM: 8GB DDR4
+  - Storage: null
+  - CPU correct: true
+  - RAM correct: true
+  - Storage null: true
+  PASS: Basic functionality works correctly
+
+Test 2: All Parameters Set
+  - CPU: Intel Core i7
+  - Storage: 1TB NVMe SSD
+  - Graphics: NVIDIA RTX 4070
+  - WiFi enabled: true
+  - Bluetooth enabled: true
+  PASS: All parameters set correctly
+
+Test 3: Edge Cases - Empty Strings
+  - Storage empty: true
+  - Graphics empty: true
+  - Motherboard empty: true
+  PASS: Empty strings handled correctly
+
+Test 4: Method Chaining
+  - Same builder instance: true
+  - Storage set correctly: true
+  - WiFi set correctly: true
+  PASS: Method chaining works correctly
+
+Test 5: Immutability
+  - CPU unchanged: true
+  - RAM unchanged: true
+  - Storage unchanged: true
+  - Objects have same values: true
+  PASS: Object immutability verified
+
+Test 6: Builder Reusability
+  - Different configurations: true
+  - Gaming PC has graphics: true
+  - Office PC no graphics: true
+  PASS: Builder reusability works correctly
+
+Test 7: Boundary Values
+  - WiFi true correct: true
+  - WiFi false correct: true
+  - Single char correct: true
+  PASS: Boundary values handled correctly
+
+Test 8: Validation Scenarios
+  - Contains CPU: true
+  - Contains RAM: true
+  - Contains Storage: true
+  - toString output: Computer Configuration:
+CPU: Intel i7
+RAM: 32GB
+St...
+  PASS: toString() method works correctly
+
+=== Test Summary ===
+Total Tests: 8
+Passed: 8
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! Builder Pattern implementation is working correctly.
