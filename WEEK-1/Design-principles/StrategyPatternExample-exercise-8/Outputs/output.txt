@@ -1,0 +1,211 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Code\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin StrategyPatternExampleTest "
+=== Strategy Pattern Test Suite ===
+
+Test 1: Credit Card Strategy Creation
+  - Strategy created: CreditCardPayment
+  - Is PaymentStrategy instance: true
+  - Is CreditCardPayment instance: true
+  - Object is not null: true
+  PASS: Credit Card strategy created successfully
+
+Test 2: PayPal Strategy Creation
+  - Strategy created: PayPalPayment
+  - Is PaymentStrategy instance: true
+  - Is PayPalPayment instance: true
+  - Object is not null: true
+  PASS: PayPal strategy created successfully
+
+Test 3: Context Functionality
+Processing Credit Card Payment:
+Card Number: **** **** **** 7654
+Cardholder: Jane Smith
+Amount: $75.5
+Credit Card payment of $75.5 completed successfully!
+Transaction ID: CC1750247746784
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: jane.smith@email.com
+Amount: $200.0
+PayPal payment of $200.0 completed successfully!
+Transaction ID: PP1750247746794
+----------------------------------------
+  - Credit Card context executed payment successfully
+  - PayPal context executed payment successfully
+  - Both contexts worked independently
+  PASS: Context functionality working correctly
+
+Test 4: Runtime Strategy Switching
+Processing Credit Card Payment:
+Card Number: **** **** **** 1111
+Cardholder: Bob Johnson
+Amount: $50.25
+Credit Card payment of $50.25 completed successfully!
+Transaction ID: CC1750247746798
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: bob.johnson@email.com
+Amount: $100.75
+PayPal payment of $100.75 completed successfully!
+Transaction ID: PP1750247746799
+----------------------------------------
+Processing Credit Card Payment:
+Card Number: **** **** **** 4444
+Cardholder: Alice Brown
+Amount: $25.0
+Credit Card payment of $25.0 completed successfully!
+Transaction ID: CC1750247746801
+----------------------------------------
+  - Strategy switched from Credit Card to PayPal
+  - Strategy switched from PayPal to Credit Card
+  - All payments executed successfully after switching
+  PASS: Runtime strategy switching working correctly
+
+Test 5: Interface Compliance
+Processing Credit Card Payment:
+Card Number: **** **** **** 8888
+Cardholder: Interface Test
+Amount: $10.0
+Credit Card payment of $10.0 completed successfully!
+Transaction ID: CC1750247746805
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: interface@test.com
+Amount: $20.0
+PayPal payment of $20.0 completed successfully!
+Transaction ID: PP1750247746806
+----------------------------------------
+  - CreditCardPayment implements PaymentStrategy: true
+  - PayPalPayment implements PaymentStrategy: true
+  - Interface methods callable: true
+  PASS: All interface contracts properly implemented
+
+Test 6: Null Strategy Handling
+No payment strategy selected!
+No payment strategy selected!
+  - Null strategy in constructor handled
+  - Null strategy set after initialization handled
+  - No exceptions thrown during null handling
+  PASS: Null strategy handling working correctly
+
+Test 7: Polymorphic Behavior
+Processing Credit Card Payment:
+Card Number: **** **** **** 4444
+Cardholder: Poly User 1
+Amount: $50.0
+Credit Card payment of $50.0 completed successfully!
+Transaction ID: CC1750247746811
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: poly1@example.com
+Amount: $60.0
+PayPal payment of $60.0 completed successfully!
+Transaction ID: PP1750247746812
+----------------------------------------
+Processing Credit Card Payment:
+Card Number: **** **** **** 5555
+Cardholder: Poly User 2
+Amount: $70.0
+Credit Card payment of $70.0 completed successfully!
+Transaction ID: CC1750247746813
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: poly2@example.com
+Amount: $80.0
+PayPal payment of $80.0 completed successfully!
+Transaction ID: PP1750247746814
+----------------------------------------
+  - 4 different strategies tested
+  - All strategies worked through common interface
+  - Polymorphic behavior demonstrated
+  PASS: Polymorphic behavior working correctly
+
+Test 8: Multiple Context Objects
+Processing Credit Card Payment:
+Card Number: **** **** **** 1111
+Cardholder: User One
+Amount: $100.0
+Credit Card payment of $100.0 completed successfully!
+Transaction ID: CC1750247746817
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: user2@example.com
+Amount: $150.0
+PayPal payment of $150.0 completed successfully!
+Transaction ID: PP1750247746821
+----------------------------------------
+Processing Credit Card Payment:
+Card Number: **** **** **** 2222
+Cardholder: User Three
+Amount: $75.0
+Credit Card payment of $75.0 completed successfully!
+Transaction ID: CC1750247746823
+----------------------------------------
+  - 3 different contexts created successfully
+  - Each context used its assigned strategy
+  - All contexts worked independently
+  PASS: Multiple context objects working correctly
+
+Test 9: Strategy Method Functionality
+Processing Credit Card Payment:
+Card Number: **** **** **** 6666
+Cardholder: Method Test
+Amount: $0.0
+Credit Card payment of $0.0 completed successfully!
+Transaction ID: CC1750247746825
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: method@test.com
+Amount: $0.0
+PayPal payment of $0.0 completed successfully!
+Transaction ID: PP1750247746826
+----------------------------------------
+Processing Credit Card Payment:
+Card Number: **** **** **** 6666
+Cardholder: Method Test
+Amount: $0.01
+Credit Card payment of $0.01 completed successfully!
+Transaction ID: CC1750247746828
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: method@test.com
+Amount: $0.01
+PayPal payment of $0.01 completed successfully!
+Transaction ID: PP1750247746829
+----------------------------------------
+Processing Credit Card Payment:
+Card Number: **** **** **** 6666
+Cardholder: Method Test
+Amount: $100.0
+Credit Card payment of $100.0 completed successfully!
+Transaction ID: CC1750247746830
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: method@test.com
+Amount: $100.0
+PayPal payment of $100.0 completed successfully!
+Transaction ID: PP1750247746831
+----------------------------------------
+Processing Credit Card Payment:
+Card Number: **** **** **** 6666
+Cardholder: Method Test
+Amount: $999999.99
+Credit Card payment of $999999.99 completed successfully!
+Transaction ID: CC1750247746832
+----------------------------------------
+Processing PayPal Payment:
+PayPal Email: method@test.com
+Amount: $999999.99
+PayPal payment of $999999.99 completed successfully!
+Transaction ID: PP1750247746834
+----------------------------------------
+  - 4 different amounts tested
+  - Both strategies handled all amounts
+  - No exceptions thrown during payment execution
+  PASS: Strategy method functionality working correctly
+
+=== Test Summary ===
+Total Tests: 9
+Passed: 9
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! Strategy Pattern implementation is working correctly.
