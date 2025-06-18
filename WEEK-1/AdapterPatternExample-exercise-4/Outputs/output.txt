@@ -1,0 +1,171 @@
+=== Adapter Pattern Test Suite ===
+
+Test 1: Basic Adapter Functionality
+Processing payment of 100.0 USD through PayPal Gateway
+Charging card for 200.0 EUR using Stripe Gateway
+Initiating payment of 300.0 INR via Razorpay Gateway
+  - PayPal result: true
+  - Stripe result: true
+  - Razorpay result: true
+  - PayPal status: PayPal Transaction Completed Successfully
+  - Stripe status: Stripe Charge Processed Successfully
+  - Razorpay status: Razorpay Payment Initiated and Completed
+  PASS: Basic adapter functionality works correctly
+
+Test 2: Null Adapter Scenarios
+
+=== Processing Transaction ===
+Amount: 100.0 USD
+ERROR: No payment processor configured!
+Transaction failed - cannot process payment
+================================
+
+  - PaymentService created with null adapter
+  - Transaction processing attempted
+  - No exceptions thrown
+  PASS: Null adapter scenarios handled gracefully
+
+Test 3: Invalid Input Validation
+PayPal: Invalid amount - must be greater than 0
+Stripe: Invalid amount - must be greater than 0
+Razorpay: Invalid amount - must be greater than 0
+PayPal: Invalid amount - must be greater than 0
+Stripe: Invalid amount - must be greater than 0
+Razorpay: Invalid amount - must be greater than 0
+PayPal: Invalid currency - cannot be null or empty
+Stripe: Invalid currency - cannot be null or empty
+Razorpay: Invalid currency - cannot be null or empty
+  - Negative amounts handled: false
+  - Zero amounts handled: false
+  - Null currency handled: false
+  PASS: Invalid input validation handled gracefully
+
+Test 4: Adapter with Null Gateway
+PayPal Gateway is null - cannot process payment
+Stripe Gateway is null - cannot process payment
+Razorpay Gateway is null - cannot process payment
+  - PayPal with null gateway: false
+  - Stripe with null gateway: false
+  - Razorpay with null gateway: false
+  - Status retrieval works: true
+  PASS: Null gateway scenarios handled gracefully
+
+Test 5: Polymorphic Behavior
+  - Testing polymorphic behavior:
+Processing payment of 99.99 USD through PayPal Gateway
+    PayPal result: true
+    PayPal status: PayPal Transaction Completed Successfully
+Charging card for 99.99 USD using Stripe Gateway
+    Stripe result: true
+    Stripe status: Stripe Charge Processed Successfully
+Initiating payment of 99.99 USD via Razorpay Gateway
+    Razorpay result: true
+    Razorpay status: Razorpay Payment Initiated and Completed
+  PASS: Polymorphic behavior works correctly
+
+Test 6: Multiple Adapters for Same Gateway
+Processing payment of 100.0 USD through PayPal Gateway
+Processing payment of 200.0 EUR through PayPal Gateway
+  - Adapter 1 result: true
+  - Adapter 2 result: true
+  - Adapter 1 status: PayPal Transaction Completed Successfully
+  - Adapter 2 status: PayPal Transaction Completed Successfully
+  PASS: Multiple adapters work correctly with same gateway
+
+Test 7: Adapter Chaining
+
+=== Processing Transaction ===
+Amount: 150.0 USD
+[LOG] Starting payment processing for 150.0 USD
+Processing payment of 150.0 USD through PayPal Gateway
+[LOG] Payment processing completed with result: true
+[LOG] Getting payment status
+[LOG] Retrieved status: PayPal Transaction Completed Successfully
+Payment Status: PayPal Transaction Completed Successfully
+Transaction completed successfully!
+================================
+
+  - Base adapter created
+  - Logging adapter chained
+  - Chained adapter used in service
+  PASS: Adapter chaining works correctly
+
+Test 8: Runtime Adapter Switching
+
+=== Processing Transaction ===
+Amount: 100.0 USD
+Processing payment of 100.0 USD through PayPal Gateway
+Payment Status: PayPal Transaction Completed Successfully
+Transaction completed successfully!
+================================
+
+
+=== Processing Transaction ===
+Amount: 200.0 EUR
+Charging card for 200.0 EUR using Stripe Gateway
+Payment Status: Stripe Charge Processed Successfully
+Transaction completed successfully!
+================================
+
+
+=== Processing Transaction ===
+Amount: 300.0 INR
+Initiating payment of 300.0 INR via Razorpay Gateway
+Payment Status: Razorpay Payment Initiated and Completed
+Transaction completed successfully!
+================================
+
+
+=== Processing Transaction ===
+Amount: 400.0 GBP
+ERROR: No payment processor configured!
+Transaction failed - cannot process payment
+Payment Status: Razorpay Payment Initiated and Completed
+Transaction completed successfully!
+================================
+
+
+=== Processing Transaction ===
+Amount: 400.0 GBP
+ERROR: No payment processor configured!
+Transaction failed - cannot process payment
+================================
+
+Payment Status: Razorpay Payment Initiated and Completed
+Transaction completed successfully!
+================================
+
+
+=== Processing Transaction ===
+Amount: 400.0 GBP
+ERROR: No payment processor configured!
+Transaction failed - cannot process payment
+================================
+
+  - PayPal adapter used
+  - Stripe adapter used
+  - Razorpay adapter used
+  - Null adapter handled
+  PASS: Runtime adapter switching works correctly
+
+=== Test Summary ===
+Total Tests: 8
+Passed: 8
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! Adapter Pattern implementation is working correctly.
+Payment Status: Razorpay Payment Initiated and Completed
+Transaction completed successfully!
+================================
+
+
+=== Processing Transaction ===
+Amount: 400.0 GBP
+ERROR: No payment processor configured!
+Transaction failed - cannot process payment
+================================
+
+  - PayPal adapter used
+  - Stripe adapter used
+  - Razorpay adapter used
+  - Null adapter handled
