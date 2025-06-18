@@ -1,0 +1,30 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Cursor\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin Main "
+=== E-Commerce Platform Search Function ===
+
+All Products:
+Product{id=101, name='iPhone 15', category='Electronics'}
+Product{id=205, name='Samsung Galaxy', category='Electronics'}
+Product{id=112, name='Nike Shoes', category='Footwear'}
+Product{id=445, name='Adidas Shoes', category='Footwear'}
+Product{id=167, name='Jeans', category='Clothing'}
+Product{id=298, name='T-Shirt', category='Clothing'}
+Product{id=523, name='Headphones', category='Electronics'}
+
+=== Performance Comparison ===
+Searching for Product ID: 112
+Linear Search: Found | Time: 65300 ns
+Binary Search: Found | Time: 5600 ns
+Binary search was 11.66x faster
+
+Searching for Product ID: 999
+Linear Search: Not Found | Time: 4400 ns
+Binary Search: Not Found | Time: 2200 ns
+Binary search was 2.00x faster
+
+Searching for Product ID: 523
+Linear Search: Found | Time: 3800 ns
+Binary Search: Found | Time: 2000 ns
+Binary search was 1.90x faster
+
+
+C:\Users\srees\Desktop\DN-CZ-JFSE>
