@@ -1,0 +1,78 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Code\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin CommandPatternExampleTest "
+=== Command Pattern Test Suite ===
+
+Test 1: Basic Functionality
+Living Room light is ON
+Living Room light is OFF
+  - Light on command executed successfully
+  - Light off command executed successfully
+  PASS: Basic functionality test passed
+
+Test 2: Multiple Receivers
+Living Room light is ON
+Bedroom light is ON
+Kitchen light is ON
+Bathroom light is ON
+Garage light is ON
+Living Room light is OFF
+Bedroom light is OFF
+Kitchen light is OFF
+Bathroom light is OFF
+Garage light is OFF
+  - Total commands executed: 10
+  - Expected commands: 10
+  PASS: Multiple receivers test passed
+
+Test 3: Command Reusability
+Test Light light is ON
+Test Light light is OFF
+Test Light light is ON
+Test Light light is OFF
+Test Light light is ON
+Test Light light is OFF
+  - Total successful executions: 6
+  - Expected executions: 6
+  PASS: Command reusability test passed
+
+Test 4: Edge Cases
+No command set!
+No command set!
+ light is ON
+ light is OFF
+Room #1 @Home (Main Floor) light is ON
+  - Total edge cases handled: 5
+  - Expected handlings: 5
+  PASS: Edge cases test passed
+
+Test 5: Multiple Remote Controls
+Shared Light light is ON
+Shared Light light is OFF
+Shared Light light is ON
+  - Total successful operations: 3
+  - Expected operations: 3
+  PASS: Multiple remote controls test passed
+
+Test 6: Same Command Type, Different Receivers
+Office light is ON
+Conference Room light is ON
+Office light is OFF
+Conference Room light is OFF
+  - Total successful commands: 4
+  - Expected commands: 4
+  PASS: Same command type, different receivers test passed
+
+Test 7: Null Command Handling
+No command set!
+No command set!
+Test light is ON
+No command set!
+  - Total null scenarios handled: 4
+  - Expected handlings: 4
+  PASS: Null command handling test passed
+
+=== Test Summary ===
+Total Tests: 7
+Passed: 7
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! Command Pattern implementation is working correctly.
