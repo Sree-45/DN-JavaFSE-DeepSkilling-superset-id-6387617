@@ -1,0 +1,64 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Cursor\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin DependencyInjectionMain "
+=== Dependency Injection Test Suite ===
+
+Test 1: Dependency Injection
+CustomerService created with repository dependency injected
+CustomerService: Listing all customers
+Retrieving all customers
+  - Repository created successfully
+  - CustomerService created with injected repository
+  - Service operation test: 3 customers found
+  PASS: Dependency injection successful
+
+Test 2: Service Operations
+CustomerService created with repository dependency injected
+CustomerService: Creating new customer
+Saving customer: sreeshanth
+CustomerService: Getting customer by ID 1
+Searching for customer with ID: 1
+  - Customer created: true
+  - Customer name: sreeshanth
+  - Customer email: sreeshanth@gmail.com
+  PASS: Service operations work correctly
+
+Test 3: Repository Integration
+CustomerService created with repository dependency injected
+CustomerService: Creating new customer
+Saving customer: priya
+CustomerService: Creating new customer
+Saving customer: harsha
+CustomerService: Listing all customers
+Retrieving all customers
+  - Customers created successfully
+  - Total customers: 3
+  PASS: Repository integration successful
+
+Test 4: Data Flow
+CustomerService created with repository dependency injected
+CustomerService: Creating new customer
+Saving customer: sreeshanth
+CustomerService: Getting customer by ID 4
+Searching for customer with ID: 4
+CustomerService: Removing customer with ID 4
+Deleting customer with ID: 4
+CustomerService: Getting customer by ID 4
+Searching for customer with ID: 4
+Customer not found with ID: 4
+  - Customer created and found: true
+  - Customer removed: true
+  PASS: Complete data flow verified
+
+Test 5: Null Safety
+CustomerService created with repository dependency injected
+CustomerService: Getting customer by ID 999
+Searching for customer with ID: 999
+Customer not found with ID: 999
+  - Non-existent customer handled: true
+  PASS: Null safety maintained
+
+=== Test Summary ===
+Total Tests: 5
+Passed: 5
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! Dependency Injection implementation is working correctly.
