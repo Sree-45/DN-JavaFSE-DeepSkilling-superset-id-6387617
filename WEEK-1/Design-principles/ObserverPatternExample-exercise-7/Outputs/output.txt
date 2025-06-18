@@ -1,0 +1,401 @@
+C:\Users\srees\Desktop\DN-CZ-JFSE> cmd /C ""C:\Program Files\Java\jdk-21\bin\java.exe" -XX:+ShowCodeDetailsInExceptionMessages -cp C:\Users\srees\AppData\Roaming\Code\User\workspaceStorage\6c60e7dc5e28cc81b82fa6d1c05f1ae4\redhat.java\jdt_ws\DN-CZ-JFSE_50b269ae\bin ObserverPatternExampleTest "
+=== Observer Pattern Test Suite ===
+
+Test 1: Observer Registration
+Observer registered successfully.
+Observer registered successfully.
+
+Stock price updated: AAPL = $150.25
+[Trading Pro Mobile App] Push notification: AAPL price updated to $150.25
+[Market Dashboard Web App] Dashboard updated: AAPL = $150.25
+  - MobileApp observer registered: true
+  - WebApp observer registered: true
+  - Both observers received notifications
+  PASS: Observer registration successful
+
+Test 2: Observer Deregistration
+Observer registered successfully.
+Observer registered successfully.
+Observer deregistered successfully.
+
+Stock price updated: GOOGL = $2750.8
+[Market Dashboard Web App] Dashboard updated: GOOGL = $2750.8
+  - MobileApp deregistered successfully
+  - Only WebApp received notification after deregistration
+  PASS: Observer deregistration successful
+
+Test 3: Notification System
+Observer registered successfully.
+Observer registered successfully.
+
+Stock price updated: MSFT = $300.5
+[Notification Test Mobile App] Push notification: MSFT price updated to $300.5
+[Notification Test Web App] Dashboard updated: MSFT = $300.5
+
+Stock price updated: TSLA = $250.75
+[Notification Test Mobile App] Push notification: TSLA price updated to $250.75
+[Notification Test Web App] Dashboard updated: TSLA = $250.75
+
+Stock price updated: AMZN = $180.25
+[Notification Test Mobile App] Push notification: AMZN price updated to $180.25
+[Notification Test Web App] Dashboard updated: AMZN = $180.25
+  - Multiple stock price updates completed
+  - All observers received notifications for each update
+  PASS: Notification system working correctly
+
+Test 4: Multiple Observer Types
+Observer registered successfully.
+Observer registered successfully.
+
+Stock price updated: NVDA = $450.0
+[Multi Type Test Mobile App] Push notification: NVDA price updated to $450.0
+[Multi Type Test Web App] Dashboard updated: NVDA = $450.0
+  - MobileApp implements Observer: true
+  - WebApp implements Observer: true
+  - Both observer types received notifications
+  PASS: Multiple observer types working correctly
+
+Test 5: Interface Compliance
+Observer registered successfully.
+Observer deregistered successfully.
+[Interface Test Mobile App] Push notification: TEST price updated to $100.0
+  - StockMarket implements Stock: true
+  - MobileApp implements Observer: true
+  - WebApp implements Observer: true
+  - Interface methods callable: true
+  PASS: All interface contracts properly implemented
+
+Test 6: Null Handling
+Observer registered successfully.
+Observer deregistered successfully.
+
+Stock price updated: null = $100.0
+  - Null observer registration handled
+  - Null observer deregistration handled
+  - Null stock symbol handled
+  PASS: Null handling working correctly
+
+Test 7: Duplicate Registration
+Observer registered successfully.
+Observer registered successfully.
+
+Stock price updated: TEST = $100.0
+[Duplicate Test Mobile App] Push notification: TEST price updated to $100.0
+[Duplicate Test Mobile App] Push notification: TEST price updated to $100.0
+  - Observer registered twice successfully
+  - Duplicate notifications received (expected behavior)
+  PASS: Duplicate registration handled correctly
+
+Test 8: Deregister Non-existent Observer
+Observer registered successfully.
+Observer deregistered successfully.
+
+Stock price updated: TEST = $200.0
+[Registered Mobile App] Push notification: TEST price updated to $200.0
+  - Non-existent observer deregistration handled
+  - Registered observer still functional
+  PASS: Non-existent deregistration handled correctly
+
+Test 9: Empty Observer List
+
+Stock price updated: EMPTY = $300.0
+  - Stock price updated with no observers
+  - Manual notification call completed
+  PASS: Empty observer list handled correctly
+
+Test 10: Edge Case Stock Values
+Observer registered successfully.
+
+Stock price updated: ZERO = $0.0
+[Edge Case Tester Mobile App] Push notification: ZERO price updated to $0.0
+
+Stock price updated: NEGATIVE = $-50.25
+[Edge Case Tester Mobile App] Push notification: NEGATIVE price updated to $-50.25
+
+Stock price updated: LARGE = $1.7976931348623157E308
+[Edge Case Tester Mobile App] Push notification: LARGE price updated to $1.7976931348623157E308
+
+Stock price updated: SMALL = $4.9E-324
+[Edge Case Tester Mobile App] Push notification: SMALL price updated to $4.9E-324
+
+Stock price updated:  = $100.0
+[Edge Case Tester Mobile App] Push notification:  price updated to $100.0
+
+Stock price updated: STOCK@#$% = $123.45
+[Edge Case Tester Mobile App] Push notification: STOCK@#$% price updated to $123.45
+  - Zero price handled
+  - Negative price handled
+  - Very large price handled
+  - Very small price handled
+  - Empty stock symbol handled
+  - Special characters in symbol handled
+  PASS: All edge case stock values handled correctly
+
+Test 11: Multiple Deregistrations
+Observer registered successfully.
+Observer deregistered successfully.
+Observer deregistered successfully.
+
+Stock price updated: MULTI = $400.0
+  - Multiple deregistrations handled
+  - No notifications received after deregistration
+  PASS: Multiple deregistrations handled correctly
+
+Test 12: Large Number of Observers
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+Observer registered successfully.
+
+Stock price updated: STRESS = $500.0
+[Mobile0 Mobile App] Push notification: STRESS price updated to $500.0
+[Web1 Web App] Dashboard updated: STRESS = $500.0
+[Mobile2 Mobile App] Push notification: STRESS price updated to $500.0
+[Web3 Web App] Dashboard updated: STRESS = $500.0
+[Mobile4 Mobile App] Push notification: STRESS price updated to $500.0
+[Web5 Web App] Dashboard updated: STRESS = $500.0
+[Mobile6 Mobile App] Push notification: STRESS price updated to $500.0
+[Web7 Web App] Dashboard updated: STRESS = $500.0
+[Mobile8 Mobile App] Push notification: STRESS price updated to $500.0
+[Web9 Web App] Dashboard updated: STRESS = $500.0
+[Mobile10 Mobile App] Push notification: STRESS price updated to $500.0
+[Web11 Web App] Dashboard updated: STRESS = $500.0
+[Mobile12 Mobile App] Push notification: STRESS price updated to $500.0
+[Web13 Web App] Dashboard updated: STRESS = $500.0
+[Mobile14 Mobile App] Push notification: STRESS price updated to $500.0
+[Web15 Web App] Dashboard updated: STRESS = $500.0
+[Mobile16 Mobile App] Push notification: STRESS price updated to $500.0
+[Web17 Web App] Dashboard updated: STRESS = $500.0
+[Mobile18 Mobile App] Push notification: STRESS price updated to $500.0
+[Web19 Web App] Dashboard updated: STRESS = $500.0
+[Mobile20 Mobile App] Push notification: STRESS price updated to $500.0
+[Web21 Web App] Dashboard updated: STRESS = $500.0
+[Mobile22 Mobile App] Push notification: STRESS price updated to $500.0
+[Web23 Web App] Dashboard updated: STRESS = $500.0
+[Mobile24 Mobile App] Push notification: STRESS price updated to $500.0
+[Web25 Web App] Dashboard updated: STRESS = $500.0
+[Mobile26 Mobile App] Push notification: STRESS price updated to $500.0
+[Web27 Web App] Dashboard updated: STRESS = $500.0
+[Mobile28 Mobile App] Push notification: STRESS price updated to $500.0
+[Web29 Web App] Dashboard updated: STRESS = $500.0
+[Mobile30 Mobile App] Push notification: STRESS price updated to $500.0
+[Web31 Web App] Dashboard updated: STRESS = $500.0
+[Mobile32 Mobile App] Push notification: STRESS price updated to $500.0
+[Web33 Web App] Dashboard updated: STRESS = $500.0
+[Mobile34 Mobile App] Push notification: STRESS price updated to $500.0
+[Web35 Web App] Dashboard updated: STRESS = $500.0
+[Mobile36 Mobile App] Push notification: STRESS price updated to $500.0
+[Web37 Web App] Dashboard updated: STRESS = $500.0
+[Mobile38 Mobile App] Push notification: STRESS price updated to $500.0
+[Web39 Web App] Dashboard updated: STRESS = $500.0
+[Mobile40 Mobile App] Push notification: STRESS price updated to $500.0
+[Web41 Web App] Dashboard updated: STRESS = $500.0
+[Mobile42 Mobile App] Push notification: STRESS price updated to $500.0
+[Web43 Web App] Dashboard updated: STRESS = $500.0
+[Mobile44 Mobile App] Push notification: STRESS price updated to $500.0
+[Web45 Web App] Dashboard updated: STRESS = $500.0
+[Mobile46 Mobile App] Push notification: STRESS price updated to $500.0
+[Web47 Web App] Dashboard updated: STRESS = $500.0
+[Mobile48 Mobile App] Push notification: STRESS price updated to $500.0
+[Web49 Web App] Dashboard updated: STRESS = $500.0
+[Mobile50 Mobile App] Push notification: STRESS price updated to $500.0
+[Web51 Web App] Dashboard updated: STRESS = $500.0
+[Mobile52 Mobile App] Push notification: STRESS price updated to $500.0
+[Web53 Web App] Dashboard updated: STRESS = $500.0
+[Mobile54 Mobile App] Push notification: STRESS price updated to $500.0
+[Web55 Web App] Dashboard updated: STRESS = $500.0
+[Mobile56 Mobile App] Push notification: STRESS price updated to $500.0
+[Web57 Web App] Dashboard updated: STRESS = $500.0
+[Mobile58 Mobile App] Push notification: STRESS price updated to $500.0
+[Web59 Web App] Dashboard updated: STRESS = $500.0
+[Mobile60 Mobile App] Push notification: STRESS price updated to $500.0
+[Web61 Web App] Dashboard updated: STRESS = $500.0
+[Mobile62 Mobile App] Push notification: STRESS price updated to $500.0
+[Web63 Web App] Dashboard updated: STRESS = $500.0
+[Mobile64 Mobile App] Push notification: STRESS price updated to $500.0
+[Web65 Web App] Dashboard updated: STRESS = $500.0
+[Mobile66 Mobile App] Push notification: STRESS price updated to $500.0
+[Web67 Web App] Dashboard updated: STRESS = $500.0
+[Mobile68 Mobile App] Push notification: STRESS price updated to $500.0
+[Web69 Web App] Dashboard updated: STRESS = $500.0
+[Mobile70 Mobile App] Push notification: STRESS price updated to $500.0
+[Web71 Web App] Dashboard updated: STRESS = $500.0
+[Mobile72 Mobile App] Push notification: STRESS price updated to $500.0
+[Web73 Web App] Dashboard updated: STRESS = $500.0
+[Mobile74 Mobile App] Push notification: STRESS price updated to $500.0
+[Web75 Web App] Dashboard updated: STRESS = $500.0
+[Mobile76 Mobile App] Push notification: STRESS price updated to $500.0
+[Web77 Web App] Dashboard updated: STRESS = $500.0
+[Mobile78 Mobile App] Push notification: STRESS price updated to $500.0
+[Web79 Web App] Dashboard updated: STRESS = $500.0
+[Mobile80 Mobile App] Push notification: STRESS price updated to $500.0
+[Web81 Web App] Dashboard updated: STRESS = $500.0
+[Mobile82 Mobile App] Push notification: STRESS price updated to $500.0
+[Web83 Web App] Dashboard updated: STRESS = $500.0
+[Mobile84 Mobile App] Push notification: STRESS price updated to $500.0
+[Web85 Web App] Dashboard updated: STRESS = $500.0
+[Mobile86 Mobile App] Push notification: STRESS price updated to $500.0
+[Web87 Web App] Dashboard updated: STRESS = $500.0
+[Mobile88 Mobile App] Push notification: STRESS price updated to $500.0
+[Web89 Web App] Dashboard updated: STRESS = $500.0
+[Mobile90 Mobile App] Push notification: STRESS price updated to $500.0
+[Web91 Web App] Dashboard updated: STRESS = $500.0
+[Mobile92 Mobile App] Push notification: STRESS price updated to $500.0
+[Web93 Web App] Dashboard updated: STRESS = $500.0
+[Mobile94 Mobile App] Push notification: STRESS price updated to $500.0
+[Web95 Web App] Dashboard updated: STRESS = $500.0
+[Mobile96 Mobile App] Push notification: STRESS price updated to $500.0
+[Web97 Web App] Dashboard updated: STRESS = $500.0
+[Mobile98 Mobile App] Push notification: STRESS price updated to $500.0
+[Mobile80 Mobile App] Push notification: STRESS price updated to $500.0
+[Web81 Web App] Dashboard updated: STRESS = $500.0
+[Mobile82 Mobile App] Push notification: STRESS price updated to $500.0
+[Web83 Web App] Dashboard updated: STRESS = $500.0
+[Mobile84 Mobile App] Push notification: STRESS price updated to $500.0
+[Web85 Web App] Dashboard updated: STRESS = $500.0
+[Mobile86 Mobile App] Push notification: STRESS price updated to $500.0
+[Web87 Web App] Dashboard updated: STRESS = $500.0
+[Mobile88 Mobile App] Push notification: STRESS price updated to $500.0
+[Web89 Web App] Dashboard updated: STRESS = $500.0
+[Mobile90 Mobile App] Push notification: STRESS price updated to $500.0
+[Web91 Web App] Dashboard updated: STRESS = $500.0
+[Mobile92 Mobile App] Push notification: STRESS price updated to $500.0
+[Web93 Web App] Dashboard updated: STRESS = $500.0
+[Mobile94 Mobile App] Push notification: STRESS price updated to $500.0
+[Web95 Web App] Dashboard updated: STRESS = $500.0
+[Mobile96 Mobile App] Push notification: STRESS price updated to $500.0
+[Web97 Web App] Dashboard updated: STRESS = $500.0
+[Mobile98 Mobile App] Push notification: STRESS price updated to $500.0
+[Web85 Web App] Dashboard updated: STRESS = $500.0
+[Mobile86 Mobile App] Push notification: STRESS price updated to $500.0
+[Web87 Web App] Dashboard updated: STRESS = $500.0
+[Mobile88 Mobile App] Push notification: STRESS price updated to $500.0
+[Web89 Web App] Dashboard updated: STRESS = $500.0
+[Mobile90 Mobile App] Push notification: STRESS price updated to $500.0
+[Web91 Web App] Dashboard updated: STRESS = $500.0
+[Mobile92 Mobile App] Push notification: STRESS price updated to $500.0
+[Web93 Web App] Dashboard updated: STRESS = $500.0
+[Mobile94 Mobile App] Push notification: STRESS price updated to $500.0
+[Web95 Web App] Dashboard updated: STRESS = $500.0
+[Mobile96 Mobile App] Push notification: STRESS price updated to $500.0
+[Web97 Web App] Dashboard updated: STRESS = $500.0
+[Mobile98 Mobile App] Push notification: STRESS price updated to $500.0
+[Mobile94 Mobile App] Push notification: STRESS price updated to $500.0
+[Web95 Web App] Dashboard updated: STRESS = $500.0
+[Mobile96 Mobile App] Push notification: STRESS price updated to $500.0
+[Web97 Web App] Dashboard updated: STRESS = $500.0
+[Mobile98 Mobile App] Push notification: STRESS price updated to $500.0
+[Mobile96 Mobile App] Push notification: STRESS price updated to $500.0
+[Web97 Web App] Dashboard updated: STRESS = $500.0
+[Mobile98 Mobile App] Push notification: STRESS price updated to $500.0
+[Web97 Web App] Dashboard updated: STRESS = $500.0
+[Mobile98 Mobile App] Push notification: STRESS price updated to $500.0
+[Mobile98 Mobile App] Push notification: STRESS price updated to $500.0
+[Web99 Web App] Dashboard updated: STRESS = $500.0
+  - 100 observers registered successfully
+  - All observers notified in 25ms
+  - Performance acceptable: true
+  PASS: Large number of observers handled efficiently
+
+=== Test Summary ===
+Total Tests: 12
+Passed: 12
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! Observer Pattern implementation is working correctly.
