@@ -1,0 +1,116 @@
+=== Decorator Pattern Test Suite ===
+
+Test 1: Base Component Creation
+Email Notification: Test message from base component
+  - Component class: EmailNotifier
+  - Is Notifier instance: true
+  - Is EmailNotifier instance: true
+  - Can send message: true
+  PASS: Base component created successfully
+
+Test 2: Single Decorator Functionality
+Email Notification: Test message with SMS decorator
+SMS Notification: Test message with SMS decorator
+Email Notification: Test message with Slack decorator
+Slack Notification: Test message with Slack decorator
+  - SMS Decorator class: SMSNotifierDecorator
+  - SMS is decorator instance: true
+  - SMS implements Notifier: true
+  - SMS can send message: true
+  - Slack Decorator class: SlackNotifierDecorator
+  - Slack is decorator instance: true
+  - Slack implements Notifier: true
+  - Slack can send message: true
+  PASS: Single decorators work correctly
+
+Test 3: Multiple Decorator Chaining
+Email Notification: Test message with SMS and Slack decorators
+SMS Notification: Test message with SMS and Slack decorators
+Slack Notification: Test message with SMS and Slack decorators
+  - Final decorator class: SlackNotifierDecorator
+  - Is outermost decorator: true
+  - Implements Notifier: true
+  - Can send message: true
+  PASS: Multiple decorator chaining works correctly
+
+Test 4: Polymorphic Behavior
+Email Notification: Polymorphic test message 1
+  - Notifier 1 class: EmailNotifier
+  - Implements Notifier: true
+  - Can send message: true
+Email Notification: Polymorphic test message 2
+SMS Notification: Polymorphic test message 2
+  - Notifier 2 class: SMSNotifierDecorator
+  - Implements Notifier: true
+  - Can send message: true
+Email Notification: Polymorphic test message 3
+Slack Notification: Polymorphic test message 3
+  - Notifier 3 class: SlackNotifierDecorator
+  - Implements Notifier: true
+  - Can send message: true
+Email Notification: Polymorphic test message 4
+SMS Notification: Polymorphic test message 4
+Slack Notification: Polymorphic test message 4
+  - Notifier 4 class: SlackNotifierDecorator
+  - Implements Notifier: true
+  - Can send message: true
+  PASS: Polymorphic behavior works correctly
+
+Test 5: Decorator Returns Correct Type
+Email Notification: Interface method test
+SMS Notification: Interface method test
+  - Returned object implements Notifier: true
+  - Can call interface methods: true
+  PASS: Decorator returns Notifier interface
+
+Test 6: Component Operations
+Email Notification: Normal message
+SMS Notification: Normal message
+Slack Notification: Normal message
+Email Notification:
+SMS Notification:
+Slack Notification:
+Email Notification: Message with special chars: !@#$%^&*()
+SMS Notification: Message with special chars: !@#$%^&*()
+Slack Notification: Message with special chars: !@#$%^&*()
+  - All operations executed: true
+  PASS: All component operations executed without errors
+
+Test 7: Multiple Decorator Instances
+Email Notification: Test message 1
+SMS Notification: Test message 1
+Email Notification: Test message 2
+SMS Notification: Test message 2
+  - Decorated1 class: SMSNotifierDecorator
+  - Decorated2 class: SMSNotifierDecorator
+  - Both are decorators: true
+  - Both implement Notifier: true
+  - Different instances: true
+  - Both can send: true
+  PASS: Multiple decorator instances work correctly
+
+Test 8: Decorator Inheritance Structure
+  - SMSNotifierDecorator extends NotifierDecorator: true
+  - SlackNotifierDecorator extends NotifierDecorator: true
+  - SMSNotifierDecorator implements Notifier: true
+  - SlackNotifierDecorator implements Notifier: true
+  PASS: Decorator inheritance structure correct
+
+  PASS: Decorator inheritance structure correct
+  PASS: Decorator inheritance structure correct
+
+Test 9: Null Safety
+Email Notification: null
+SMS Notification: null
+Email Notification:
+SMS Notification:
+  - Handles null messages: true
+  - Handles empty strings: true
+  PASS: Null safety checks passed
+
+=== Test Summary ===
+Total Tests: 9
+Passed: 9
+Failed: 0
+Success Rate: 100%
+ALL TESTS PASSED! Decorator Pattern implementation is working correctly.
