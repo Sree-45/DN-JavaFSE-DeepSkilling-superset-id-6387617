@@ -1,0 +1,59 @@
+Add operation took 30500 ns
+Add operation took 3500 ns
+Add operation took 1300 ns
+Add operation took 1100 ns
+Add operation took 2100 ns
+Add operation took 1700 ns
+Add operation took 1700 ns
+
+All Employees:
+ID: 101, Name: Sreeshanth Kandagtla, Position: Developer, Salary: 60000.0
+ID: 102, Name: Rohit Sharma, Position: Manager, Salary: 85000.0
+ID: 103, Name: Priya Reddy, Position: Designer, Salary: 55000.0
+ID: 104, Name: Ananya Rao, Position: HR, Salary: 50000.0
+ID: 105, Name: Vikram Singh, Position: Developer, Salary: 62000.0
+ID: 106, Name: Kavya Patel, Position: QA Engineer, Salary: 53000.0
+ID: 107, Name: Arjun Das, Position: Manager, Salary: 87000.0
+
+Searching for Employee with ID 102:
+Search operation took 1300 ns
+ID: 102, Name: Rohit Sharma, Position: Manager, Salary: 85000.0
+
+Updating Salary of Employee ID 103:
+Search operation took 700 ns
+Salary updated.
+
+List Developers:
+
+Employees with position: Developer
+Searching for Employee with ID 102:
+Search operation took 1300 ns
+ID: 102, Name: Rohit Sharma, Position: Manager, Salary: 85000.0
+
+Updating Salary of Employee ID 103:
+Search operation took 700 ns
+Salary updated.
+
+List Developers:
+
+Employees with position: Developer
+ID: 101, Name: Sreeshanth Kandagtla, Position: Developer, Salary: 60000.0
+ID: 105, Name: Vikram Singh, Position: Developer, Salary: 62000.0
+
+Deleting Employee with ID 104:
+Employee deleted.
+Delete operation took 106100 ns
+
+All Employees After Deletion:
+ID: 101, Name: Sreeshanth Kandagtla, Position: Developer, Salary: 60000.0
+ID: 102, Name: Rohit Sharma, Position: Manager, Salary: 85000.0
+ID: 103, Name: Priya Reddy, Position: Designer, Salary: 58000.0
+ID: 105, Name: Vikram Singh, Position: Developer, Salary: 62000.0
+ID: 106, Name: Kavya Patel, Position: QA Engineer, Salary: 53000.0
+ID: 107, Name: Arjun Das, Position: Manager, Salary: 87000.0
+
+--- Statistics ---
+Total Employees Added: 7
+Total Searches Made: 2
+Total Deletions Made: 1
+Current Employees in System: 6
