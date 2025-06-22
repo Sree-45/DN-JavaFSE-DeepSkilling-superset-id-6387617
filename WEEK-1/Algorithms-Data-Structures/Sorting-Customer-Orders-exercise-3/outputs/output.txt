@@ -1,0 +1,52 @@
+Original Orders:
+OrderID: 1, Customer: Sreeshanth, TotalPrice: $450.0
+OrderID: 2, Customer: Ananya, TotalPrice: $120.0
+OrderID: 3, Customer: Harsha, TotalPrice: $305.75
+OrderID: 4, Customer: Ravi, TotalPrice: $250.5
+OrderID: 5, Customer: Pooja, TotalPrice: $199.99
+OrderID: 6, Customer: Krishna, TotalPrice: $720.0
+OrderID: 7, Customer: Sreeshanth, TotalPrice: $310.5
+OrderID: 8, Customer: Meghana, TotalPrice: $180.0
+OrderID: 9, Customer: Nikhil, TotalPrice: $330.25
+OrderID: 10, Customer: Karthik, TotalPrice: $99.5
+OrderID: 11, Customer: Sreeshanth, TotalPrice: $510.0
+OrderID: 12, Customer: Raj, TotalPrice: $600.0
+OrderID: 13, Customer: Ritika, TotalPrice: $250.0
+OrderID: 14, Customer: Akhil, TotalPrice: $410.0
+OrderID: 15, Customer: Roshni, TotalPrice: $130.0
+
+Orders after Bubble Sort:
+OrderID: 10, Customer: Karthik, TotalPrice: $99.5
+OrderID: 2, Customer: Ananya, TotalPrice: $120.0
+OrderID: 15, Customer: Roshni, TotalPrice: $130.0
+OrderID: 8, Customer: Meghana, TotalPrice: $180.0
+OrderID: 5, Customer: Pooja, TotalPrice: $199.99
+OrderID: 13, Customer: Ritika, TotalPrice: $250.0
+OrderID: 4, Customer: Ravi, TotalPrice: $250.5
+OrderID: 3, Customer: Harsha, TotalPrice: $305.75
+OrderID: 7, Customer: Sreeshanth, TotalPrice: $310.5
+OrderID: 9, Customer: Nikhil, TotalPrice: $330.25
+OrderID: 14, Customer: Akhil, TotalPrice: $410.0
+OrderID: 1, Customer: Sreeshanth, TotalPrice: $450.0
+OrderID: 11, Customer: Sreeshanth, TotalPrice: $510.0
+OrderID: 12, Customer: Raj, TotalPrice: $600.0
+OrderID: 6, Customer: Krishna, TotalPrice: $720.0
+Bubble Sort Time: 0.0105 ms
+
+Orders after Quick Sort:
+OrderID: 10, Customer: Karthik, TotalPrice: $99.5
+OrderID: 2, Customer: Ananya, TotalPrice: $120.0
+OrderID: 15, Customer: Roshni, TotalPrice: $130.0
+OrderID: 8, Customer: Meghana, TotalPrice: $180.0
+OrderID: 5, Customer: Pooja, TotalPrice: $199.99
+OrderID: 13, Customer: Ritika, TotalPrice: $250.0
+OrderID: 4, Customer: Ravi, TotalPrice: $250.5
+OrderID: 3, Customer: Harsha, TotalPrice: $305.75
+OrderID: 7, Customer: Sreeshanth, TotalPrice: $310.5
+OrderID: 9, Customer: Nikhil, TotalPrice: $330.25
+OrderID: 14, Customer: Akhil, TotalPrice: $410.0
+OrderID: 1, Customer: Sreeshanth, TotalPrice: $450.0
+OrderID: 11, Customer: Sreeshanth, TotalPrice: $510.0
+OrderID: 12, Customer: Raj, TotalPrice: $600.0
+OrderID: 6, Customer: Krishna, TotalPrice: $720.0
+Quick Sort Time: 0.0092 ms
