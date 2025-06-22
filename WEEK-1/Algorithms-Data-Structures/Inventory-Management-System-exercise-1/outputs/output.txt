@@ -1,0 +1,39 @@
+Product added successfully.
+Product added successfully.
+Product added successfully.
+Product added successfully.
+Product added successfully.
+Product added successfully.
+Product added successfully.
+Product already exists. Use updateProduct to modify.
+
+Displaying All Products:
+Product ID: P104, Name: Laptop, Quantity: 3, Price: 750.0
+Product ID: P103, Name: Monitor, Quantity: 5, Price: 120.0
+Product ID: P106, Name: Webcam, Quantity: 8, Price: 60.0
+Product ID: P105, Name: Headphones, Quantity: 15, Price: 45.0
+Product ID: P102, Name: Mouse, Quantity: 20, Price: 15.0
+Product ID: P101, Name: Keyboard, Quantity: 10, Price: 25.5
+Product ID: P107, Name: USB-C Cable, Quantity: 30, Price: 10.0
+
+Viewing Product with ID P102:
+Product ID: P102, Name: Mouse, Quantity: 20, Price: 15.0
+
+Updating Product P102:
+Product updated successfully.
+Product ID: P102, Name: Wireless Mouse, Quantity: 25, Price: 18.5
+
+Deleting Product P101:
+Product deleted successfully.
+Product not found.
+
+Final Inventory:
+Product ID: P104, Name: Laptop, Quantity: 3, Price: 750.0
+Product ID: P103, Name: Monitor, Quantity: 5, Price: 120.0
+Product ID: P106, Name: Webcam, Quantity: 8, Price: 60.0
+Product ID: P105, Name: Headphones, Quantity: 15, Price: 45.0
+Product ID: P102, Name: Wireless Mouse, Quantity: 25, Price: 18.5
+Product ID: P107, Name: USB-C Cable, Quantity: 30, Price: 10.0
+
+Calculating Total Inventory Value:
+Total Inventory Value: $4767.5
