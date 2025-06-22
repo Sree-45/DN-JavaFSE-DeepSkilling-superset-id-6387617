@@ -1,0 +1,58 @@
+Time to add task ID 1: 37700 ns
+Time to add task ID 2: 7300 ns
+Time to add task ID 3: 2800 ns
+Time to add task ID 4: 1700 ns
+Time to add task ID 5: 1500 ns
+Time to add task ID 6: 1400 ns
+Time to add task ID 7: 2600 ns
+Time to add task ID 8: 3800 ns
+Time to add task ID 9: 2500 ns
+Time to add task ID 10: 2100 ns
+Time to add task ID 11: 1700 ns
+Time to add task ID 12: 1400 ns
+Time to add task ID 13: 1600 ns
+Time to add task ID 14: 1400 ns
+Time to add task ID 15: 2700 ns
+
+Traversing Tasks:
+Task ID: 1, Name: Design UI, Status: Pending
+Task ID: 2, Name: Implement Backend, Status: In Progress
+Task ID: 3, Name: Testing, Status: Pending
+Task ID: 4, Name: Database Setup, Status: Not Started
+Task ID: 5, Name: Integration, Status: Pending
+Task ID: 6, Name: Deployment, Status: Not Started
+Task ID: 7, Name: Code Review, Status: In Progress
+Task ID: 8, Name: Bug Fixing, Status: Pending
+Task ID: 9, Name: Write Documentation, Status: Pending
+Task ID: 10, Name: Final Approval, Status: Not Started
+Task ID: 11, Name: Create Test Cases, Status: Pending
+Task ID: 12, Name: Setup CI/CD, Status: In Progress
+Task ID: 13, Name: UX Feedback Analysis, Status: Pending
+Task ID: 14, Name: Project Review, Status: Not Started
+Task ID: 15, Name: Sprint Planning, Status: Completed
+Time to traverse tasks: 25943600 ns
+
+Searching for Task ID 12:
+Time to search task ID 12: 7600 ns
+Task ID: 12, Name: Setup CI/CD, Status: In Progress
+
+Deleting Task ID 3:
+Time to delete task ID 3: 2600 ns
+Deleted successfully
+
+Traversing Tasks After Deletion:
+Task ID: 1, Name: Design UI, Status: Pending
+Task ID: 2, Name: Implement Backend, Status: In Progress
+Task ID: 4, Name: Database Setup, Status: Not Started
+Task ID: 5, Name: Integration, Status: Pending
+Task ID: 6, Name: Deployment, Status: Not Started
+Task ID: 7, Name: Code Review, Status: In Progress
+Task ID: 8, Name: Bug Fixing, Status: Pending
+Task ID: 9, Name: Write Documentation, Status: Pending
+Task ID: 10, Name: Final Approval, Status: Not Started
+Task ID: 11, Name: Create Test Cases, Status: Pending
+Task ID: 12, Name: Setup CI/CD, Status: In Progress
+Task ID: 13, Name: UX Feedback Analysis, Status: Pending
+Task ID: 14, Name: Project Review, Status: Not Started
+Task ID: 15, Name: Sprint Planning, Status: Completed
+Time to traverse tasks: 2540800 ns
