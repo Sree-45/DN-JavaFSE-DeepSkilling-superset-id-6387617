@@ -1,0 +1,11 @@
+--- Linear Search ---
+Book ID: 7, Title: A Storm of Swords, Author: George R. R. Martin
+Time taken (nanoseconds): 262400
+
+--- Binary Search ---
+Book ID: 7, Title: A Storm of Swords, Author: George R. R. Martin
+Time taken (nanoseconds): 74200
+
+--- Additional Statistics ---
+Total books in library: 25
+Binary search was 3.54 times faster than linear search.
