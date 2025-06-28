@@ -1,0 +1,4 @@
+20:20:30.945 [main] DEBUG c.e.s.loggingExample - This is a DEBUG message
+20:20:30.950 [main] INFO  c.e.s.loggingExample - This is an INFO message
+20:20:30.952 [main] WARN  c.e.s.loggingExample - This is a WARN message
+20:20:30.952 [main] ERROR c.e.s.loggingExample - This is an ERROR message
