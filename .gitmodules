@@ -4,3 +4,6 @@
 [submodule "WEEK-8/Git-HOL-2"]
 	path = WEEK-8/Git-HOL-2
 	url = https://gitlab.com/teamx8724718/gitignoredemo
+[submodule "demo-branching"]
+	path = demo-branching
+	url = https://gitlab.com/teamx8724718/demo-branching
