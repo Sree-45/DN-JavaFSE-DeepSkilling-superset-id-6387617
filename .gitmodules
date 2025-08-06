@@ -1,0 +1,6 @@
+[submodule "WEEK-8/Git-HOL-1/GitDemo"]
+	path = WEEK-8/Git-HOL-1/GitDemo
+	url = https://gitlab.com/teamx8724718/gitdemo
+[submodule "WEEK-8/Git-HOL-2"]
+	path = WEEK-8/Git-HOL-2
+	url = https://gitlab.com/teamx8724718/gitignoredemo
