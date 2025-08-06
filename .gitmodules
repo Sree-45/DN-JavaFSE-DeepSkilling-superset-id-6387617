@@ -7,3 +7,6 @@
 [submodule "demo-branching"]
 	path = demo-branching
 	url = https://gitlab.com/teamx8724718/demo-branching
+[submodule "merge-conflicts"]
+	path = merge-conflicts
+	url = https://gitlab.com/teamx8724718/merge-conflicts
